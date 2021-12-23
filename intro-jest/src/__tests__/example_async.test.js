@@ -22,7 +22,7 @@ describe("async code", () => {
     });
   });
 
-  test("example of async with async await", async () => {
+  test.only("example of async with async await", async () => {
     const result = await asyncPromise();
     expect(result).toBe(true);
   });
