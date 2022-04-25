@@ -1,34 +1,31 @@
-import React from 'react'
-import TextField from '@material-ui/core/TextField'
-import InputLabel from '@material-ui/core/InputLabel'
-import Select from '@material-ui/core/Select'
-import Button from '@material-ui/core/Button'
+import React from "react";
+import { InputLabel, Select, TextField } from "@material-ui/core";
 
-export const Form = () => {
-  return (
-    <>
-      <h1>Create product</h1>
-      <form>
-        <TextField label="name" id="name" />
-        <TextField label="size" id="size" />
-
-        <InputLabel htmlFor="type">Type</InputLabel>
-        <Select
-          native
-          value=""
-          inputProps={{
-            name: 'type',
-            id: 'type',
-          }}
-        >
-          <option aria-label="None" value="" />
-          <option value={'eletronic'}>Eletronic</option>
-          <option value={'furniture'}>Furniture</option>
-          <option value={'clothing'}>Clothing</option>
-        </Select>
-
-        <Button>Submit</Button>
-      </form>
-    </>
-  )
+const inputPropsSelectType = {
+    name:'type',
+    id:'type'
 }
+
+export default function Form() {
+    return (
+        <>
+         <h1>Create a product</h1>
+         <form>
+             <TextField label="name" id="name" />
+             <TextField label="size" id="size" />
+
+             <InputLabel htmlFor="type">Type</InputLabel>
+             <Select
+                native
+                value=""
+                inputProps={inputPropsSelectType}             
+             >
+                 <option value="electronic">Electronic</option>
+                 <option value="furniture">Furniture</option>
+                 <option value="clothing">Clothing</option>
+             </Select>
+         </form>
+        </>
+    )
+}
+
