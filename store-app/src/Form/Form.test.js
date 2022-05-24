@@ -14,7 +14,7 @@ describe('when the form is mounted', () => {
         expect(formTitle).toBeInTheDocument()
     })
 
-    it('The form must have the following fields: name, size, type (electronic, furniture, clothing) and a submit button.', () => {
+    it('The form must have the following fields: name, size, type (electronic, furniture, clothing)', () => {
 
         expect(screen.getByLabelText(/name/i)).toBeInTheDocument()
         expect(screen.getByLabelText(/size/i)).toBeInTheDocument()
@@ -25,7 +25,13 @@ describe('when the form is mounted', () => {
         expect(screen.queryByText(/furniture/i)).toBeInTheDocument()
         expect(screen.queryByText(/clothing/i)).toBeInTheDocument()
 
-
     })
+
+    it('should exists submit button', () => {
+        expect(screen.getByRole('button', { name: /submit/i })).toBeInTheDocument()
+    })
+
+
+
 
 })
