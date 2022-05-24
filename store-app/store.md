@@ -30,34 +30,34 @@ administrating my products.
 
 ---
 
-# Aplicación de formulario de tienda
+# Aplicação de formulário de loja
 
-## Almacenar producto
+## Armazenar produto
 
-Como gerente de mercadería, quiero almacenar nuevos productos como una forma de
-poder administrarlos.
+Como gerente de mercadorias, quero estocar novos produtos como forma de
+ser capaz de gerenciá-los.
 
-** Criterios de aceptación (AC): **
+** Critérios de Aceitação (AC): **
 
-- Debe haber una página de formulario de creación de producto.
-- El formulario debe tener los siguientes campos: nombre, talla, tipo
-  (electrónico, mobiliario, ropa) y un botón de envío.
-- Todos los campos son obligatorios.
-  - Si el usuario deja campos vacíos y hace clic en el botón enviar, la página
-    del formulario debe mostrar los mensajes obligatorios con el formato: _ “El
-    [nombre del campo] es obligatorio” _ al lado del campo correspondiente.
-  - Si el usuario desenfoca un campo que está vacío, entonces el formulario debe
-    mostrar el mensaje requerido para ese campo.
-- El formulario debe enviar los datos a un servicio de punto final de backend.
-  - El botón de envío debe estar desactivado mientras la página del formulario
-    está recuperando los datos. Después de la recuperación, no es necesario
-    deshabilitar el botón de envío.
-  - En la ruta de éxito, la página del formulario debe mostrar el mensaje de
-    éxito _ "Producto almacenado" _ y limpiar los valores de los campos.
-  - En un error del servidor, la página del formulario debe mostrar el mensaje
-    de error _ "Error inesperado, inténtelo de nuevo" _.
-  - En la ruta de solicitud no válida, la página del formulario debe mostrar el
-    mensaje de error _ “El formulario no es válido, los campos [campo1 ...
-    campoN] son ​​obligatorios” _.
-  - En la ruta del servicio no encontrado, la página del formulario debe mostrar
-    el mensaje _ "Error de conexión, intente más tarde" _.
+- Deve haver uma página de formulário de criação de produto.
+- O formulário deve conter os seguintes campos: nome, tamanho, tipo
+  (eletrônicos, móveis, roupas) e um botão enviar.
+- Todos os campos são obrigatórios.
+  - Se o usuário deixar os campos vazios e clicar no botão enviar, a página
+    do formulário deve conter as mensagens obrigatórias com o formato: _ “O
+    [nome do campo] é obrigatório” _ ao lado do campo correspondente.
+  - Se o usuário borrar um campo que está vazio, o formulário deve
+    exibir a mensagem necessária para esse campo.
+- O formulário deve enviar os dados para um serviço de endpoint de back-end.
+  - O botão Enviar deve ser desativado enquanto a página do formulário
+    está recuperando os dados. Após a recuperação, não é necessário
+    desative o botão enviar.
+  - No caminho de sucesso, a página do formulário deve exibir a mensagem de sucesso.
+    success _ "Produto Armazenado" _ e limpe os valores do campo.
+  - Em um erro do servidor, a página do formulário deve exibir a mensagem
+    error _ "Erro inesperado, tente novamente" _.
+  - Na rota de solicitação inválida, a página do formulário deve exibir o
+    mensagem de erro _ “O formulário não é válido, os campos [campo1 ...
+    campoN] são obrigatórios” _.
+  - No caminho do serviço não encontrado, a página do formulário deve exibir
+    a mensagem _ "Falha na conexão, tente novamente mais tarde" _.
